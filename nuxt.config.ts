@@ -1,5 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@nuxt/ui']
+  extends: ['@nuxt/ui-pro'],
+  modules: [
+    '@nuxt/content',
+    '@nuxt/ui'
+  ],
+  ui:{
+    primary: 'red',
+  }
 })
+
