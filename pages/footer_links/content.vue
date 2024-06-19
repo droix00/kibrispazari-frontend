@@ -1,10 +1,8 @@
 <template>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <div class="content">
-    <div class="sol_reklam_alani"></div>
     <div class="content__menu">
       <h2 class="content__menu-title">Kategoriler</h2>
       <ul class="content__menu-list">
@@ -25,8 +23,7 @@
           <a :href="'/' + item.link">
             <img :src="item.image" alt="Resim">
             <div class="ilan_fiyat">{{ item.price }} TL</div>
-            <p class="text-sm p-1" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">{{
-            item.description }}</p>
+            <p class="text-sm p-1" style="overflow: hidden;text-overflow: ellipsis;white-space: nowrap;">{{ item.description }}</p>
           </a>
         </div>
       </div>
@@ -46,7 +43,7 @@
         </div>
       </div>
     </div>
-    <div class="sag_reklam_alani"></div>
+
   </div>
   <myFooter />
 </template>
@@ -78,7 +75,7 @@ const solMenu = [
 const vitrineItem = [
   { id: 1, image: 'a.jpg', description: 'BMW 318i 2007 tertemiz satılık', link: 'ilan', price: 100 },
   { id: 2, image: 'b.jpg', description: 'Audi A4 sahibinden satılıktır', link: 'girisyap', price: 200 },
-  { id: 3, image: 'buyuk-resim.jpg', description: 'Açıklama 3 olarak ifade edilen bir ağaçta tütmüş ', link: 'ilan', price: 300 },
+  { id: 3, image: 'buyuk-resim.jpg', description: 'Açıklama 3', link: 'ilan', price: 300 },
   { id: 4, image: 'c.jpg', description: 'Açıklama 4', link: 'ilan', price: 400 },
   { id: 5, image: 'c.jpg', description: 'Açıklama 5', link: 'ilan', price: 500 },
   { id: 6, image: 'c.jpg', description: 'Açıklama 6', link: 'ilan', price: 600 },
@@ -133,18 +130,14 @@ const vitrineItem = [
 </script>
 
 <style scoped>
+@media all and (max-width:768px) {
+  /*buraya mobil cihazlar için resposive kodları gelecek */
+}
+
 .content {
   /*Content alanı */
   display: flex;
-  /* margin: 0rem 12.2rem 2rem 12.8rem; */
-}
-
-.sol_reklam_alani {
-  flex: 1.48;
-}
-
-.sag_reklam_alani {
-  flex: 1.45;
+  margin: 0rem 12.2rem 2rem 12.8rem;
 }
 
 .content__menu {
@@ -201,19 +194,16 @@ const vitrineItem = [
 .content__vitrine-grid {
   /* anasayfa vitrini gridi */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(11.1rem, 1fr));
-  /* Önerilen değişiklik: minmax() fonksiyonu kullanarak esneklik sağlanıyor */
+  grid-template-columns: repeat(5, 1fr);
   gap: 1rem;
   margin-left: 1.2rem;
 }
 
 .content__vitrine-item {
+  /* anasayfa vitrinindeki her ürünün ayarı*/
   border: 1px solid #ccc;
   padding: 0rem;
-  width: 11.1;
-  /* Önerilen değişiklik: Yüzde olarak genişlik hesaplaması */
-  max-width: 100%;
-  /* Maksimum genişlik belirlenerek öğelerin çok genişlemesi önleniyor */
+  width: 11.1rem;
 }
 
 .ilan_fiyat {
@@ -225,7 +215,7 @@ const vitrineItem = [
 
 .content__vitrine-item img {
   /* anasayfa vitrinindeki her ürünün resim ayarı */
-  width: 100%;
+  width: 11.1rem;
   height: 9rem;
   background-size: cover;
   flex-wrap: wrap;
@@ -235,19 +225,5 @@ const vitrineItem = [
 .content__vitrine-item p {
   /* anasayfa vitrinindeki her ürünün alt metin ayarı */
   margin: 0.2rem;
-}
-
-@media all and (max-width:768px) {
-
-  /* MOBİL CİHAZ AYARLARI KODLARI */
-  .sol_reklam_alani,
-  .sag_reklam_alani,
-  .content__menu {
-    display: none;
-  }
-
-  .content__vitrine-grid {
-    margin-right: 1.2rem;
-  }
 }
 </style>

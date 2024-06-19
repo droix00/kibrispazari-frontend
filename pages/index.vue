@@ -1,13 +1,12 @@
 <template>
   <div>
-    <Header/>
-    <content/>
-    
+    <Header />
+    <content />
   </div>
 </template>
-<script>
-import Header from '~/pages/Header.vue'; 
-import content from '~/pages/content.vue'; // Header bileşenini içeri aktar
+<script scoped>
+import Header from '~/pages/Header.vue';
+import content from '~/pages/content.vue';
 
 export default {
   components: {

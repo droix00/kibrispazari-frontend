@@ -135,4 +135,23 @@ export default {
     padding: 1rem 2rem 2rem 2rem;
     margin-top: 2rem;
 }
+@media all and (max-width:768px) {
+    .content {
+        /*Content alanı */
+        display: flex;
+        margin: 0;
+    }
+
+    .content__menu {
+        display: none;
+    }
+
+    .biz_icerik {
+        margin:0.5rem;
+        padding:0.5rem 0.5rem 2rem 0.5rem;
+        margin-top: 1rem;
+        margin-bottom:3rem;
+        border-radius: 0.3rem;
+    }
+}
 </style>

@@ -82,4 +82,14 @@ export default {
     border-radius: 0% 3% 3% 0%;
     box-shadow: rgba(0, 0, 0, 0.25) 8px 14px 28px;
 }
+@media all and (max-width:768px) {
+    .login_right_layout{
+        margin-bottom: 2rem;
+        padding-bottom: 3rem;
+        border-radius: 1% 1% 1% 1%;
+    }
+    .photo_left_layout{
+        display: none
+    }
+}
 </style>

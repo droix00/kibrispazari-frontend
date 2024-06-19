@@ -1,11 +1,10 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+// import { ref } from 'vue';
+// const active = ref('araba');
+// const setActive = (menu: string) => {
+//   active.value = menu;
+// };
 
-const active = ref('araba');
-
-const setActive = (menu: string) => {
-  active.value = menu;
-};
 const links = [{
   label: 'Biz',
   children: [{
@@ -99,10 +98,9 @@ const links = [{
     Adapazarim.com'da kullanıcılar tarafından oluşturulan bütün içerikler, bilgi ve yorumların yayınlanması ve
     doğruluğu
     ile ilgili tüm yasal yükümlülükler içeriği oluşturan kullanıcıya aittir. İlanlara ait içeriklerin yorum ve
-    bilgilerin yanlışlık, eksiklik veya yasalarla düzenlenmiş kurallara aykırılığından dolayı kktcarabam.com asla
+    bilgilerin yanlışlık, eksiklik veya yasalarla düzenlenmiş kurallara aykırılığından dolayı adapazarim.com asla
     sorumlu tutulamaz. İlanlarla ilgili sorularınızı ilan sahipleriyle iletişime geçip sorabilirsiniz.</p>
   <p class="footer_copyright">Copyright Droix & Gravis © {{ new Date().getFullYear() }}</p>
-
 </template>
 
 <style>
@@ -141,5 +139,10 @@ const links = [{
   background-color: #292424;
   text-align: center;
   color: white;
+}
+@media all and (max-width:768px) {
+  .footer_ui { 
+  padding: 2rem 1.20rem;    
+}
 }
 </style>

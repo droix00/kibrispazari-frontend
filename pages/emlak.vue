@@ -12,25 +12,25 @@ const modules = [{
   to: 'https://github.com/nuxt-community/eslint-module',
   icon: 'fa-solid fa-house-flag fa-2xl'
 }, {
-  title: 'Kiralık Villa',
+  title: 'Villa',
   to: 'https://github.com/nuxt-modules/tailwindcss',
-  icon: 'fa-solid fa-car fa-2xl'
+  icon: 'fa-solid fa-house-chimney fa-2xl'
 }, {
   title: 'Kiralık İşyeri',
   to: 'https://github.com/nuxt-modules/tailwindcss',
-  icon: 'fa-solid fa-mobile-screen-button fa-2xl'
+  icon: 'fa-solid fa-shop fa-2xl'
 }, {
   title: 'Satılık İşyeri',
   to: 'https://github.com/nuxt-modules/tailwindcss',
-  icon: 'fa-solid fa-laptop fa-2xl'
+  icon: 'fa-solid fa-dollar-sign fa-2xl'
 }, {
   title: 'Kiralık Arazi',
   to: 'https://github.com/nuxt-modules/tailwindcss',
-  icon: 'fa-solid fa-plug fa-2xl'
+  icon: 'fa-solid fa-map-marked-alt fa-2xl'
 }, {
   title: 'Satılık Arazi',
   to: 'https://github.com/nuxt-modules/tailwindcss',
-  icon: 'fa-solid fa-tree-city fa-2xl'
+  icon: 'fa-solid fa-tractor fa-2xl' //fa-tree-city
 }]
 
 const myBreadCrumb = [{

@@ -28,7 +28,8 @@
                     </div>
                 </button>
                 <div class="mt-8 flex items-center space-x-1">
-                    <p class="text-sm font-semibold text-gray-500">Oturum açarak <a href="" class="text-indigo-400">Hizmet Şartları'nı</a> kabul
+                    <p class="text-sm font-semibold text-gray-500">Oturum açarak <a href=""
+                            class="text-indigo-400">Hizmet Şartları'nı</a> kabul
                         etmiş sayılırsınız</p>
                 </div>
                 <div class="mt-3 flex items-center space-x-1">
@@ -76,5 +77,17 @@ export default {
     background-size: cover;
     height: 90%;
     margin: auto;
+}
+
+@media all and (max-width:768px) {
+    .login_left_layout {
+        margin-bottom: 2rem;
+        padding-bottom: 3rem;
+        border-radius: 1% 1% 1% 1%;
+    }
+
+    .photo_right_layout {
+        display: none
+    }
 }
 </style>
