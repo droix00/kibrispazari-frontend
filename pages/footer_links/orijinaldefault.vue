@@ -4,20 +4,7 @@
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <header class="header">
-    <div class="burgerapp">
-      <div class="menu-icon" @click="toggleMenu">
-        <div :class="['bar', isOpen ? 'rotate1' : '']"></div>
-        <div :class="['bar', isOpen ? 'hide' : '']"></div>
-        <div :class="['bar', isOpen ? 'rotate2' : '']"></div>
-      </div>
-      <nav :class="['menu', isOpen ? 'show' : '']">
-        <div v-for="burgeritem in menuItems" :key="index" :style="{ transitionDelay: `${index * 0.15}s` }" class="menu-item">
-          <a :href="burgeritem.to">{{ burgeritem.title }}</a>
-        </div>
-      </nav>
-    </div>
     <div class="header__logo"><router-link to="Content">LOGO</router-link></div>
-    <div class="profile_icon"><i class="fa-solid fa-user"></i></div>
     <div class="header__search">
       <div class="search-container">
         <input type="text" v-model="searchQuery" @input="handleSearch"
@@ -41,34 +28,10 @@
   <slot />
 </template>
 <script>
-
 export default {
-
-
-
-
-
-  data() {
+  data() {/* SEARCING  INPUT KODLARI */
     return {
-      isOpen: false,
-      menuItems: [
-        { title: 'Acil Acil', to: 'ilanlar' },
-        { title: 'Fiyatı Düşenler', to: 'ilanlar' },
-        { title: 'Emlak', to: 'ilanlar' },
-        { title: 'Araba', to: 'ilanlar' },
-        { title: 'Telefon', to: 'ilanlar' },
-        { title: 'Bilgisayar', to: 'ilanlar' },
-        { title: 'Elektronik', to: 'ilanlar' },
-        { title: 'Ev Araçları', to: 'emlak' },
-        { title: 'Bölüm Araçları', to: 'emlak' },
-        { title: 'Özel Ders', to: 'emlak' },
-        { title: 'İş İlanları', to: 'emlak' },
-        { title: 'Sanayi & Parça', to: 'emlak' },
-      ],
-
-
-
-      searchQuery: '',/* SEARCING  INPUT KODLARI */
+      searchQuery: '',
       items: ['Emlak> Kiralık Daire', 'Emlak> Satılık Daire', 'Emlak> Villa', 'Emlak> Arazi', 'Emlak> Tarla', 'Emlak> Otel'], // Arama yapılacak öğeler
       isDropdownVisible: false
     };
@@ -81,17 +44,6 @@ export default {
     }
   },
   methods: {
-    toggleMenu() {
-      this.isOpen = !this.isOpen;
-    },
-
-
-
-
-
-
-
-
     handleSearch() {
       this.isDropdownVisible = this.searchQuery.length > 0;
     },
@@ -104,17 +56,6 @@ export default {
 </script>
 
 <style scoped>
-.burgerapp,
-.menu-item,
-.menu-icon,
-.profile_icon {
-  display: none;
-}
-
-
-
-
-
 .search-container {
   display: flex;
 }
@@ -193,149 +134,20 @@ export default {
 }
 
 
-
-
-@media all and (max-width: 932px) {
+@media all and (max-width: 768px) {
   .header {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto);
-  }
-
-  .burgerapp,
-  .menu-item,
-  .menu-icon,
-  .profile_icon {
-    display: unset;
-  }
-
-  .burgerapp {
-    grid-row: 1;
-    grid-column: 1/ 2;
-    margin-left: 1rem;
-  }
-
-  .menu-icon {
-    display: flex;
     flex-direction: column;
-    cursor: pointer;
-    z-index: 1001;
+    align-items: flex-start;
   }
-
-  .bar {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 4px 0;
-    transition: all 0.3s ease;
-  }
-
-  .rotate1 {
-    transform: rotate(45deg);
-    position: relative;
-    top: 11px;
-  }
-
-  .hide {
-    opacity: 0;
-  }
-
-  .rotate2 {
-    transform: rotate(-45deg);
-    position: relative;
-    top: -11px;
-  }
-
-  .menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #333;
-    position: absolute;
-    top: 6rem;
-    left: 0;
-    width: 100%;
-    transition: max-height 0.3s ease-in-out;
-    overflow: hidden;
-    max-height: 0;
-    z-index: 1000;
-    opacity: 0;
-    pointer-events: none;
-  }
-
-  .menu.show {
-    max-height: 100%;
-    /* Yeterli büyük bir değer verin */
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  .menu-item {
-    margin: 0.4rem 0;
-    opacity: 0;
-    transform: translateY(-20px);
-    transition: all 0.3s ease;
-  }
-
-  .menu.show .menu-item {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  .menu-item a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: color 0.3s ease;
-  }
-
-  .menu-item a:hover {
-    color: #ddd;
-  }
-
-  .profile_icon {
-    grid-row: 1;
-    grid-column: 3/ 4;
-    color: white;
-    justify-self: flex-end;
-    font-size: 160%;
-    margin-right: 1rem;
-
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   .header__logo {
     display: inline;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    grid-row: 1;
-    margin-left: 0;
+    margin-left: 0.2rem;
   }
 
   .header__search {
     width: 100%;
     background-color: white;
-    grid-row: 2;
-    grid-column: 1/span 3;
   }
 
   .search-container input[type="text"] {
@@ -364,4 +176,24 @@ export default {
     display: none;
   }
 }
+
+/* 
+@media all and (max-width:768px) {
+  .header__logo {
+    display: inline;
+    margin-left: 1.20rem;
+  }
+
+  .search-container {
+    display: none;
+  }
+
+  .header__nav-link {
+    display: none;
+  }
+}
+
+.search-container {
+  position: relative;
+} */
 </style>

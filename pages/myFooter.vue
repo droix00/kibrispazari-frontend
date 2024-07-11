@@ -140,9 +140,11 @@ const links = [{
   text-align: center;
   color: white;
 }
-@media all and (max-width:768px) {
+@media all and (max-width:932px) {
   .footer_ui { 
   padding: 2rem 1.20rem;    
+  display: flex;
+  
 }
 }
 </style>

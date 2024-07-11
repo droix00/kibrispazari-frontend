@@ -50,8 +50,8 @@
                 <div class="metrekare border-r border-gray-300">m² (Brüt)</div>
                 <div class="oda_sayisi border-r border-gray-300">Oda Sayısı</div>
                 <div class="fiyat border-r border-gray-300">Fiyat</div>
-                <div class="ilan_tarihi border-r border-gray-300">İlan Tarihi</div>
-                <div class="ilan_konum border-r border-gray-300">Konum</div>
+                <div class="ilan_bilgileri_tarihi border-r border-gray-300">İlan Tarihi</div>
+                <div class="ilan_bilgileri_konum border-r border-gray-300">Konum</div>
             </div>
             <div class="content__vitrine-grid">
                 <!-- Buraya dinamik olarak içerik ekleyebilirsiniz -->
@@ -66,10 +66,10 @@
                             <div class="metrekare border-r border-white-300">{{ item.area }}</div>
                             <div class="oda_sayisi border-r border-gray-300">{{ item.roomCount }}</div>
                             <div class="fiyat border-r border-gray-300 text-red-800">{{ item.price }}</div>
-                            <div class="ilan_tarihi border-r border-gray-300">{{ item.listingDate }}</div>
-                            <div class="ilan_konum border-r border-black-300"><i class="lokasyon fa-solid fa-location-dot"></i> {{ item.location }}</div>
+                            <div class="ilan_bilgileri_tarihi border-r border-gray-300">{{ item.listingDate }}</div>
+                            <div class="ilan_bilgileri_konum border-r border-black-300"><i class="lokasyon fa-solid fa-location-dot"></i> {{ item.location }}</div>
                         </div>
-                        <!-- <div class="ilan_fiyat">{{ item.price }} TL</div> -->
+                        <!-- <div class="ilan_bilgileri_fiyat">{{ item.price }} TL</div> -->
                         <!-- <p>{{ item.description }}</p> -->
                     </a>
                 </div>
@@ -122,25 +122,25 @@ const getBackgroundColor = (id) => {
     return id % 2 === 1 ? 'bg-wheat' : 'bg-zinc-100';
 }
 const vitrineItem = [
-    { id: 1, image: 'a.jpg', description: 'Açıklama 1', link: 'ilan', price: '12.000.000,00 TL', title: "BEYLİKDÜZÜ VESADAN METROBÜS DURAĞINA KOMŞU 2+1 SATILIK ARAKAT!", area: '200', roomCount: '3+1', listingDate: '06 Haziran 2024', location: 'Lefkoşa Göçmenköy' },
-    { id: 2, image: 'b.jpg', description: 'Açıklama 1', link: 'ilan', price: '12.000.000 TL', title: "DELİKLİTAŞ CADDESİ'NDE SATILIK 3+1 KOMBİLİ GENİŞ VE FERAH DAİRE GONCA EMLAK", area: '200', roomCount: '3+1', listingDate: '06 Haziran 2024', location: 'Lefkoşa Metehan' },
-    { id: 3, image: 'c.jpg', description: 'Açıklama 1', link: 'ilan', price: '12.000.000 TL', title: "ETLİK ŞEHİR HASTANESİ & ANTARES AVM YAKINI İSKANLI 3+1 MASRAFSIZ STAR LİFE GAYRİMENKUL", area: '200', roomCount: '3+1', listingDate: '06 Haziran 2024', location: 'Lefkoşa ' },
-    { id: 4, image: 'a.jpg', description: 'Açıklama 1', link: 'ilan', price: '12.000.000 TL', title: "SONSUZDAN BÖLGENİN ŞIK GENİŞ 5+2 KELEPİR DUBLEKSİ", area: '200', roomCount: '3+1', listingDate: '06 Haziran 2024', location: 'Lefkoşa Göçmenköy' },
-    { id: 5, image: 'b.jpg', description: 'Açıklama 1', link: 'ilan', price: '12.000.000 TL', title: "BOZARMUT'TA ŞOK ŞOK ÇOK ACİL YARI FİYATA 280 m2 ARSA VE EV KAÇAR IMM ZEYTİNAĞACI HOLDİNG", area: '200', roomCount: '3+1', listingDate: '06 Haziran 2024', location: 'Lefkoşa Göçmenköy' },
-    { id: 6, image: 'c.jpg', description: 'Açıklama 1', link: 'ilan', price: '12.000.000 TL', title: "DELİKLİTAŞ CADDESİ'NDE SATILIK 3+1 KOMBİLİ GENİŞ VE FERAH DAİRE GONCA EMLAK", area: '200', roomCount: '3+1', listingDate: '06 Haziran 2024', location: 'Lefkoşa Göçmenköy' },
-    { id: 7, image: 'a.jpg', description: 'Açıklama 1', link: 'ilan', price: '12.000.000 TL', title: "ETLİK ŞEHİR HASTANESİ & ANTARES AVM YAKINI İSKANLI 3+1 MASRAFSIZ STAR LİFE GAYRİMENKUL", area: '200', roomCount: '3+1', listingDate: '06 Haziran 2024', location: 'Lefkoşa Göçmenköy' },
-    { id: 8, image: 'b.jpg', description: 'Açıklama 1', link: 'ilan', price: '12.000.000 TL', title: "BEYLİKDÜZÜ VESADAN METROBÜS DURAĞINA KOMŞU 2+1 SATILIK ARAKAT!", area: '200', roomCount: '3+1', listingDate: '06 Haziran 2024', location: 'Lefkoşa Göçmenköy' },
-    { id: 9, image: 'c.jpg', description: 'Açıklama 1', link: 'ilan', price: '12.000.000 TL', title: "SONSUZDAN BÖLGENİN ŞIK GENİŞ 5+2 KELEPİR DUBLEKSİ", area: '200', roomCount: '3+1', listingDate: '06 Haziran 2024', location: 'Lefkoşa Göçmenköy' },
-    { id: 10, image: 'c.jpg', description: 'Açıklama 10', link: 'ilan', price: 100 },
-    { id: 11, image: 'c.jpg', description: 'Açıklama 11', link: 'ilan', price: 200 },
-    { id: 12, image: 'c.jpg', description: 'Açıklama 12', link: 'ilan', price: 300 },
-    { id: 13, image: 'c.jpg', description: 'Açıklama 13', link: 'ilan', price: 400 },
-    { id: 14, image: 'c.jpg', description: 'Açıklama 14', link: 'ilan', price: 500 },
-    { id: 15, image: 'c.jpg', description: 'Açıklama 15', link: 'ilan', price: 600 },
-    { id: 16, image: 'c.jpg', description: 'Açıklama 16', link: 'ilan', price: 800 },
-    { id: 17, image: 'c.jpg', description: 'Açıklama 17', link: 'ilan', price: 400 },
-    { id: 18, image: 'c.jpg', description: 'Açıklama 18', link: 'ilan', price: 300 },
-    { id: 19, image: 'c.jpg', description: 'Açıklama 19', link: 'ilan', price: 300 },
+    { id: 1, image: 'a.jpg', description: 'Açıklama 1', link: 'ilan_bilgileri', price: '999.000.000 TL', title: "BEYLİKDÜZÜ VESADAN METROBÜS DURAĞINA KOMŞU 2+1 SATILIK ARAKAT!", area: '200', roomCount: '3+1', listingDate: '06 Haziran 2024', location: 'Lefkoşa Göçmenköy' },
+    { id: 2, image: 'b.jpg', description: 'Açıklama 1', link: 'ilan_bilgileri', price: '12.000.000 TL', title: "DELİKLİTAŞ CADDESİ'NDE SATILIK 3+1 KOMBİLİ GENİŞ VE FERAH DAİRE GONCA EMLAK", area: '200', roomCount: '3+1', listingDate: '06 Haziran 2024', location: 'Lefkoşa Metehan' },
+    { id: 3, image: 'c.jpg', description: 'Açıklama 1', link: 'ilan_bilgileri', price: '12.000.000 TL', title: "ETLİK ŞEHİR HASTANESİ & ANTARES AVM YAKINI İSKANLI 3+1 MASRAFSIZ STAR LİFE GAYRİMENKUL", area: '200', roomCount: '3+1', listingDate: '06 Haziran 2024', location: 'Lefkoşa ' },
+    { id: 4, image: 'a.jpg', description: 'Açıklama 1', link: 'ilan_bilgileri', price: '12.000.000 TL', title: "SONSUZDAN BÖLGENİN ŞIK GENİŞ 5+2 KELEPİR DUBLEKSİ", area: '200', roomCount: '3+1', listingDate: '06 Haziran 2024', location: 'Lefkoşa Göçmenköy' },
+    { id: 5, image: 'b.jpg', description: 'Açıklama 1', link: 'ilan_bilgileri', price: '12.000.000 TL', title: "BOZARMUT'TA ŞOK ŞOK ÇOK ACİL YARI FİYATA 280 m2 ARSA VE EV KAÇAR IMM ZEYTİNAĞACI HOLDİNG", area: '200', roomCount: '3+1', listingDate: '06 Haziran 2024', location: 'Lefkoşa Göçmenköy' },
+    { id: 6, image: 'c.jpg', description: 'Açıklama 1', link: 'ilan_bilgileri', price: '12.000.000 TL', title: "DELİKLİTAŞ CADDESİ'NDE SATILIK 3+1 KOMBİLİ GENİŞ VE FERAH DAİRE GONCA EMLAK", area: '200', roomCount: '3+1', listingDate: '06 Haziran 2024', location: 'Lefkoşa Göçmenköy' },
+    { id: 7, image: 'a.jpg', description: 'Açıklama 1', link: 'ilan_bilgileri', price: '12.000.000 TL', title: "ETLİK ŞEHİR HASTANESİ & ANTARES AVM YAKINI İSKANLI 3+1 MASRAFSIZ STAR LİFE GAYRİMENKUL", area: '200', roomCount: '3+1', listingDate: '06 Haziran 2024', location: 'Lefkoşa Göçmenköy' },
+    { id: 8, image: 'b.jpg', description: 'Açıklama 1', link: 'ilan_bilgileri', price: '12.000.000 TL', title: "BEYLİKDÜZÜ VESADAN METROBÜS DURAĞINA KOMŞU 2+1 SATILIK ARAKAT!", area: '200', roomCount: '3+1', listingDate: '06 Haziran 2024', location: 'Lefkoşa Göçmenköy' },
+    { id: 9, image: 'c.jpg', description: 'Açıklama 1', link: 'ilan_bilgileri', price: '12.000.000 TL', title: "SONSUZDAN BÖLGENİN ŞIK GENİŞ 5+2 KELEPİR DUBLEKSİ", area: '200', roomCount: '3+1', listingDate: '06 Haziran 2024', location: 'Lefkoşa Göçmenköy' },
+    { id: 10, image: 'c.jpg', description: 'Açıklama 10', link: 'ilan_bilgileri', price: 100 },
+    { id: 11, image: 'c.jpg', description: 'Açıklama 11', link: 'ilan_bilgileri', price: 200 },
+    { id: 12, image: 'c.jpg', description: 'Açıklama 12', link: 'ilan_bilgileri', price: 300 },
+    { id: 13, image: 'c.jpg', description: 'Açıklama 13', link: 'ilan_bilgileri', price: 400 },
+    { id: 14, image: 'c.jpg', description: 'Açıklama 14', link: 'ilan_bilgileri', price: 500 },
+    { id: 15, image: 'c.jpg', description: 'Açıklama 15', link: 'ilan_bilgileri', price: 600 },
+    { id: 16, image: 'c.jpg', description: 'Açıklama 16', link: 'ilan_bilgileri', price: 800 },
+    { id: 17, image: 'c.jpg', description: 'Açıklama 17', link: 'ilan_bilgileri', price: 400 },
+    { id: 18, image: 'c.jpg', description: 'Açıklama 18', link: 'ilan_bilgileri', price: 300 },
+    { id: 19, image: 'c.jpg', description: 'Açıklama 19', link: 'ilan_bilgileri', price: 300 },
 ]
 </script>
 
@@ -237,14 +237,14 @@ const vitrineItem = [
     align-items: center;
 }
 
-.ilan_tarihi {
+.ilan_bilgileri_tarihi {
     width: 5rem;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.ilan_konum {
+.ilan_bilgileri_konum {
     width: 5.3rem;
     text-align: center;
     display: flex;
@@ -281,7 +281,7 @@ const vitrineItem = [
     /* height: auto; */
 }
 
-@media all and (max-width:768px) {
+@media all and (max-width:932px) {
     .content {
         /*Content alanı */
         margin: 0rem 0rem 0rem 0rem;
@@ -307,7 +307,6 @@ const vitrineItem = [
 
 
     .resim{
-        background-color: red;
         grid-row: 1/ span 3; /* İlk iki satırı kaplar */
         grid-column: 1/span 2; /* Resim birinci sütunda */
     }
@@ -325,6 +324,7 @@ const vitrineItem = [
         text-overflow: ellipsis; /* Taşan kısmı ... olarak göster */
         white-space: wrap;
         line-height: 1.25em;
+        justify-content: flex-start;
     }
 
     .fiyat {
@@ -343,8 +343,10 @@ const vitrineItem = [
         display: inline;
         margin:0rem 0.2rem 0rem 0.5rem;
     }
-    .ilan_konum {
-        width:10rem;
+    .ilan_bilgileri_konum {
+        width:8rem;
+        font-size: 0.75rem;
+        opacity: 0.8;
         border-right:none;
         justify-content: flex-start;
         grid-row: 3/span  4;/* Üçüncü satırda */
@@ -358,7 +360,7 @@ const vitrineItem = [
     .content__menu,
     .metrekare,
     .oda_sayisi,
-    .ilan_tarihi {
+    .ilan_bilgileri_tarihi {
         display: none;
     }
 }

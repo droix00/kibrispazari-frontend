@@ -1,28 +1,11 @@
-<script setup lang="ts">
-const myBreadCrumb = [{
-  label: 'Anasayfa',
-  icon: 'i-heroicons-home',
-  to: '/'
-}, {
-  label: 'İlan Ver',
-  icon: 'i-heroicons-square-3-stack-3d',
-  to: '/'
-}, {
-  label: 'Breadcrumb',
-  icon: 'i-heroicons-link',
-  to: '/'
-}]
-</script>
-
 <template>
-
   <div class="content rounded-lg">
     <p class="text-2xl px-4 py-3 bg-lime">Adım adım ilanınızı seçelim</p>
     <UBreadcrumb :links="myBreadCrumb" class="text-2xl ml-4 mb-4 bg-lime" />
     <div class="emlak_detaylar">
       <div class="mt_kare">
         <p class="text-sm font-semibold text-gray-500">m^2</p>
-                <input class="mt-1 rounded border py-1 px-3 text-lg shadow" />
+        <input class="mt-1 rounded border py-1 px-3 text-lg shadow" />
       </div>
       <div class="oda_sayisi">
         <p class="text-sm font-semibold text-gray-500">Oda Sayısı</p>
@@ -105,7 +88,6 @@ const myBreadCrumb = [{
   <myFooter />
 </template>
 
-
 <style scoped>
 .content {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
@@ -119,9 +101,63 @@ const myBreadCrumb = [{
   margin: 0rem 6rem;
 }
 
-.mt_kare, .oda_sayisi, .bina_yasi, .bulundugu_kat, .kat_sayisi, .isitma, .balkon, .asansor, .otopark, .esya, .aidat{
+.mt_kare,
+.oda_sayisi,
+.bina_yasi,
+.bulundugu_kat,
+.kat_sayisi,
+.isitma,
+.balkon,
+.asansor,
+.otopark,
+.esya,
+.aidat {
   border: 1px solid rgb(var(--color-gray-200) / 1);
-  margin:1rem;
-  padding:1rem; 
+  margin: 1rem;
+  padding: 1rem;
+}
+
+@media all and (max-width:768px) {
+  .content {
+    margin: 1rem 0.25rem 2rem 0.25rem;
+    padding: 0rem 0rem 2rem 0rem;
+  }
+
+  .emlak_detaylar {
+    grid-template-columns: repeat(2, minmax(0, 5fr));
+    margin: 0rem;
+  }
+
+  .mt_kare,
+  .oda_sayisi,
+  .bina_yasi,
+  .bulundugu_kat,
+  .kat_sayisi,
+  .isitma,
+  .balkon,
+  .asansor,
+  .otopark,
+  .esya,
+  .aidat {
+    margin: 0.4rem;
+    padding: 0rem;
+  }
 }
 </style>
+<script setup lang="ts">
+import myFooter from '~/pages/myFooter.vue'; // Header bileşenini içeri aktar
+
+const myBreadCrumb = [{
+  label: 'Anasayfa',
+  icon: 'i-heroicons-home',
+  to: '/'
+}, {
+  label: 'İlan Ver',
+  icon: 'i-heroicons-square-3-stack-3d',
+  to: '/'
+}, {
+  label: 'Breadcrumb',
+  icon: 'i-heroicons-link',
+  to: '/'
+}]
+</script>

@@ -61,36 +61,36 @@ export default {
 
 <script setup>
 const solMenu = [
-  { icon: 'fa-solid fa-clock mb-2', title: 'Acil Acil', to: 'deneme' },
-  { icon: 'fa-solid fa-chart-line my-2', title: 'Fiyatı Düşenler', to: 'deneme' },
-  { icon: 'fa-solid fa-house-flag my-2', title: 'Emlak', to: 'deneme' },
-  { icon: 'fa-solid fa-car my-2', title: 'Araba', to: 'deneme' },
-  { icon: 'fa-solid fa-mobile-screen-button my-2', title: 'Telefon', to: 'deneme' },
-  { icon: 'fa-solid fa-laptop my-2', title: 'Bilgisayar', to: 'deneme' },
-  { icon: 'fa-solid fa-plug my-2', title: 'Elektronik', to: 'deneme' },
-  { icon: 'fa-solid fa-tree-city my-2', title: 'Ev Araçları', to: 'deneme' },
-  { icon: 'fa-solid fa-graduation-cap my-2', title: 'Bölüm Araçları', to: 'deneme' },
-  { icon: 'fa-solid fa-brain my-2', title: 'Özel Ders', to: 'deneme' },
-  { icon: 'fa-solid fa-briefcase my-2', title: 'İş İlanları', to: 'deneme' },
-  { icon: 'fa-solid fa-industry my-2', title: 'Sanayi & Parça', to: 'deneme' },
+  { icon: 'fa-solid fa-clock mb-2', title: 'Acil Acil', to: 'ilanlar' },
+  { icon: 'fa-solid fa-chart-line my-2', title: 'Fiyatı Düşenler', to: 'ilanlar' },
+  { icon: 'fa-solid fa-house-flag my-2', title: 'Emlak', to: 'ilanlar' },
+  { icon: 'fa-solid fa-car my-2', title: 'Araba', to: 'ilanlar' },
+  { icon: 'fa-solid fa-mobile-screen-button my-2', title: 'Telefon', to: 'ilanlar' },
+  { icon: 'fa-solid fa-laptop my-2', title: 'Bilgisayar', to: 'ilanlar' },
+  { icon: 'fa-solid fa-plug my-2', title: 'Elektronik', to: 'ilanlar' },
+  { icon: 'fa-solid fa-tree-city my-2', title: 'Ev Araçları', to: 'emlak' },
+  { icon: 'fa-solid fa-graduation-cap my-2', title: 'Bölüm Araçları', to: 'emlak' },
+  { icon: 'fa-solid fa-brain my-2', title: 'Özel Ders', to: 'emlak' },
+  { icon: 'fa-solid fa-briefcase my-2', title: 'İş İlanları', to: 'emlak' },
+  { icon: 'fa-solid fa-industry my-2', title: 'Sanayi & Parça', to: 'emlak' },
 ]
 
 const vitrineItem = [
-  { id: 1, image: 'a.jpg', description: 'BMW 318i 2007 tertemiz satılık', link: 'ilan', price: 100 },
-  { id: 2, image: 'b.jpg', description: 'Audi A4 sahibinden satılıktır', link: 'girisyap', price: 200 },
-  { id: 3, image: 'buyuk-resim.jpg', description: 'Açıklama 3 olarak ifade edilen bir ağaçta tütmüş ', link: 'ilan', price: 300 },
-  { id: 4, image: 'c.jpg', description: 'Açıklama 4', link: 'ilan', price: 400 },
-  { id: 5, image: 'c.jpg', description: 'Açıklama 5', link: 'ilan', price: 500 },
-  { id: 6, image: 'c.jpg', description: 'Açıklama 6', link: 'ilan', price: 600 },
-  { id: 7, image: 'c.jpg', description: 'Açıklama 7', link: 'ilan', price: 700 },
-  { id: 8, image: 'c.jpg', description: 'Açıklama 8', link: 'ilan', price: 800 },
-  { id: 9, image: 'c.jpg', description: 'Açıklama 9', link: 'ilan', price: 900 },
-  { id: 10, image: 'c.jpg', description: 'Açıklama 10', link: 'ilan', price: 100 },
-  { id: 11, image: 'c.jpg', description: 'Açıklama 11', link: 'ilan', price: 200 },
-  { id: 12, image: 'c.jpg', description: 'Açıklama 12', link: 'ilan', price: 300 },
-  { id: 13, image: 'c.jpg', description: 'Açıklama 13', link: 'ilan', price: 400 },
-  { id: 14, image: 'c.jpg', description: 'Açıklama 14', link: 'ilan', price: 500 },
-  { id: 15, image: 'c.jpg', description: 'Açıklama 15', link: 'ilan', price: 600 },
+  { id: 1, image: 'a.jpg', description: 'BMW 318i 2007 tertemiz satılık', link: 'ilan_bilgileri', price: 100 },
+  { id: 2, image: 'b.jpg', description: 'Audi A4 sahibinden satılıktır', link: 'ilan_bilgileri', price: 200 },
+  { id: 3, image: 'buyuk-resim.jpg', description: 'Açıklama 3 olarak ifade edilen bir ağaçta tütmüş ', link: 'ilan_bilgileri', price: 300 },
+  { id: 4, image: 'c.jpg', description: 'Açıklama 4', link: 'ilan_bilgileri', price: 400 },
+  { id: 5, image: 'c.jpg', description: 'Açıklama 5', link: 'ilan_bilgileri', price: 500 },
+  { id: 6, image: 'c.jpg', description: 'Açıklama 6', link: 'ilan_bilgileri', price: 600 },
+  { id: 7, image: 'c.jpg', description: 'Açıklama 7', link: 'ilan_bilgileri', price: 700 },
+  { id: 8, image: 'c.jpg', description: 'Açıklama 8', link: 'ilan_bilgileri', price: 800 },
+  { id: 9, image: 'c.jpg', description: 'Açıklama 9', link: 'ilan_bilgileri', price: 900 },
+  { id: 10, image: 'c.jpg', description: 'Açıklama 10', link: 'ilan_bilgileri', price: 100 },
+  { id: 11, image: 'c.jpg', description: 'Açıklama 11', link: 'ilan_bilgileri', price: 200 },
+  { id: 12, image: 'c.jpg', description: 'Açıklama 12', link: 'ilan_bilgileri', price: 300 },
+  { id: 13, image: 'c.jpg', description: 'Açıklama 13', link: 'ilan_bilgileri', price: 400 },
+  { id: 14, image: 'c.jpg', description: 'Açıklama 14', link: 'ilan_bilgileri', price: 500 },
+  { id: 15, image: 'c.jpg', description: 'Açıklama 15', link: 'ilan_bilgileri', price: 600 },
   { id: 16, image: 'c.jpg', description: 'Açıklama 16', link: 'ilan', price: 800 },
   { id: 17, image: 'c.jpg', description: 'Açıklama 17', link: 'ilan', price: 400 },
   { id: 18, image: 'c.jpg', description: 'Açıklama 18', link: 'ilan', price: 300 },
@@ -201,7 +201,7 @@ const vitrineItem = [
 .content__vitrine-grid {
   /* anasayfa vitrini gridi */
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(11.1rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
   /* Önerilen değişiklik: minmax() fonksiyonu kullanarak esneklik sağlanıyor */
   gap: 1rem;
   margin-left: 1.2rem;
@@ -237,7 +237,7 @@ const vitrineItem = [
   margin: 0.2rem;
 }
 
-@media all and (max-width:768px) {
+@media all and (max-width:932px) {
 
   /* MOBİL CİHAZ AYARLARI KODLARI */
   .sol_reklam_alani,
@@ -249,5 +249,25 @@ const vitrineItem = [
   .content__vitrine-grid {
     margin-right: 1.2rem;
   }
+}
+@media all and (max-width:410px) {
+
+
+  .content__vitrine-title {
+  /*anasayfa vitrini yazısı ayarı */
+  font-weight: bold;
+  margin-left: 0.2rem;
+}
+
+.content__vitrine-grid {
+  /* anasayfa vitrini gridi */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+  /* Önerilen değişiklik: minmax() fonksiyonu kullanarak esneklik sağlanıyor */
+  gap: 0.4rem;
+  margin-left: 0.2rem;
+  margin-right: 0.2rem;
+}
+
 }
 </style>

@@ -258,25 +258,6 @@ export default {
 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .content__sol-reklam {
     /* SOL REKLAM ALANI */
     flex: 1.4;
@@ -289,6 +270,14 @@ export default {
     flex: 1.5;
     border: 1px dashed black;
     height: 50rem;
+}
+@media all and (max-width:768px) {
+    .content {
+    display: block;
+    }
+    .ust_baslik{
+        font-size:1rem;
+    }
 }
 </style>
 
@@ -311,6 +300,17 @@ const vitrineItem = [
         { id: 11, image: 'c.jpg', description: 'Açıklama 11' },
         { id: 12, image: 'c.jpg', description: 'Açıklama 12' },
         { id: 13, image: 'c.jpg', description: 'Açıklama 13' }
-      ]
+      ];
+      const vitrineDetails = [
+    { id: 1, image: 'a.jpg', description: 'Açıklama 1', link: 'ilan', price: '12.000.000,00 TL', title: "BEYLİKDÜZÜ VESADAN METROBÜS DURAĞINA KOMŞU 2+1 SATILIK ARAKAT!", area: '200', roomCount: '3+1', listingDate: '06 Haziran 2024', location: 'Lefkoşa Göçmenköy' },
+    { id: 2, image: 'b.jpg', description: 'Açıklama 1', link: 'ilan', price: '12.000.000 TL', title: "DELİKLİTAŞ CADDESİ'NDE SATILIK 3+1 KOMBİLİ GENİŞ VE FERAH DAİRE GONCA EMLAK", area: '200', roomCount: '3+1', listingDate: '06 Haziran 2024', location: 'Lefkoşa Metehan' },
+    { id: 3, image: 'c.jpg', description: 'Açıklama 1', link: 'ilan', price: '12.000.000 TL', title: "ETLİK ŞEHİR HASTANESİ & ANTARES AVM YAKINI İSKANLI 3+1 MASRAFSIZ STAR LİFE GAYRİMENKUL", area: '200', roomCount: '3+1', listingDate: '06 Haziran 2024', location: 'Lefkoşa ' },
+    { id: 4, image: 'a.jpg', description: 'Açıklama 1', link: 'ilan', price: '12.000.000 TL', title: "SONSUZDAN BÖLGENİN ŞIK GENİŞ 5+2 KELEPİR DUBLEKSİ", area: '200', roomCount: '3+1', listingDate: '06 Haziran 2024', location: 'Lefkoşa Göçmenköy' },
+    { id: 5, image: 'b.jpg', description: 'Açıklama 1', link: 'ilan', price: '12.000.000 TL', title: "BOZARMUT'TA ŞOK ŞOK ÇOK ACİL YARI FİYATA 280 m2 ARSA VE EV KAÇAR IMM ZEYTİNAĞACI HOLDİNG", area: '200', roomCount: '3+1', listingDate: '06 Haziran 2024', location: 'Lefkoşa Göçmenköy' },
+    { id: 6, image: 'c.jpg', description: 'Açıklama 1', link: 'ilan', price: '12.000.000 TL', title: "DELİKLİTAŞ CADDESİ'NDE SATILIK 3+1 KOMBİLİ GENİŞ VE FERAH DAİRE GONCA EMLAK", area: '200', roomCount: '3+1', listingDate: '06 Haziran 2024', location: 'Lefkoşa Göçmenköy' },
+    { id: 7, image: 'a.jpg', description: 'Açıklama 1', link: 'ilan', price: '12.000.000 TL', title: "ETLİK ŞEHİR HASTANESİ & ANTARES AVM YAKINI İSKANLI 3+1 MASRAFSIZ STAR LİFE GAYRİMENKUL", area: '200', roomCount: '3+1', listingDate: '06 Haziran 2024', location: 'Lefkoşa Göçmenköy' },
+    { id: 8, image: 'b.jpg', description: 'Açıklama 1', link: 'ilan', price: '12.000.000 TL', title: "BEYLİKDÜZÜ VESADAN METROBÜS DURAĞINA KOMŞU 2+1 SATILIK ARAKAT!", area: '200', roomCount: '3+1', listingDate: '06 Haziran 2024', location: 'Lefkoşa Göçmenköy' },
+    { id: 9, image: 'c.jpg', description: 'Açıklama 1', link: 'ilan', price: '12.000.000 TL', title: "SONSUZDAN BÖLGENİN ŞIK GENİŞ 5+2 KELEPİR DUBLEKSİ", area: '200', roomCount: '3+1', listingDate: '06 Haziran 2024', location: 'Lefkoşa Göçmenköy' },
+    { id: 10, image: 'c.jpg', description: 'Açıklama 10', link: 'ilan', price: 100 }]
 
 </script>
