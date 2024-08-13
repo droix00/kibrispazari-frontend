@@ -1,4 +1,3 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
   extends: ['@nuxt/ui-pro'],
@@ -6,8 +5,7 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@nuxt/ui'
   ],
-  ui:{
-    primary: 'red',
+  ui: {
+    // primary: 'red',
   }
 })
-

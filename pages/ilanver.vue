@@ -53,47 +53,47 @@ import myFooter from '~/pages/myFooter.vue'; // Header bileşenini içeri aktar
 
 const modules = [{
   title: 'Acil Acil',
-  to: 'emlak',
+  to: '#',
   icon: 'fa-solid fa-clock fa-2xl'
 }, {
   title: 'Emlak',
-  to: 'https://github.com/nuxt-community/eslint-module',
+  to: 'emlak-ilani-ver',
   icon: 'fa-solid fa-house fa-2xl'
 }, {
   title: 'Araba',
-  to: 'https://github.com/nuxt-modules/tailwindcss',
+  to: 'araba-ilani-ver',
   icon: 'fa-solid fa-car fa-2xl'
 }, {
   title: 'Telefon',
-  to: 'https://github.com/nuxt-modules/tailwindcss',
+  to: '##',
   icon: 'fa-solid fa-mobile-screen-button fa-2xl'
 }, {
   title: 'Bilgisayar',
-  to: 'https://github.com/nuxt-modules/tailwindcss',
+  to: '##',
   icon: 'fa-solid fa-laptop fa-2xl'
 }, {
   title: 'Elektronik',
-  to: 'https://github.com/nuxt-modules/tailwindcss',
+  to: '##',
   icon: 'fa-solid fa-plug fa-2xl'
 }, {
   title: 'Ev Araçları',
-  to: 'https://github.com/nuxt-modules/tailwindcss',
+  to: '##',
   icon: 'fa-solid fa-tree-city fa-2xl'
 }, {
   title: 'Bölüm Araçları',
-  to: 'https://github.com/nuxt-modules/tailwindcss',
+  to: '##',
   icon: 'fa-solid fa-graduation-cap fa-2xl'
 }, {
   title: 'Özel Ders',
-  to: 'https://github.com/nuxt-modules/tailwindcss',
+  to: '##',
   icon: 'fa-solid fa-brain fa-2xl'
 }, {
   title: 'İş İlanları',
-  to: 'https://github.com/nuxt-modules/tailwindcss',
+  to: '##',
   icon: 'fa-solid fa-briefcase fa-2xl'
 }, {
   title: 'Sanayi & Parça',
-  to: 'https://github.com/nuxt-modules/tailwindcss',
+  to: '##',
   icon: 'fa-solid fa-industry fa-2xl'
 }]
 

@@ -1,0 +1,28 @@
+
+
+
+OLUŞTURULACAK SAYFALAR
+___________________________
+SEARCH YAPILDIĞINDAKİ SAYFA > oluşturman lazım
+İLAN VERME SAYFALARI (PROFİL GÖRÜNTÜLEME VE GÜNCELLEME - İLANLARIM SAYFASI - İLAN GÖRÜNTÜLENME SAYISI - FAVORİLENME SAYISI)
+PROFİL SAYFASI (GİRİŞ YAPILDIĞINDA ÇIKIŞ BUTONU) >YASİR
+
+** ANASAYFA VİTRİNİNDEKİ ÜRÜNLER GÖRÜNTÜLEME SAYISINA BAĞLI OLARAK ÖNE ÇIKMALIDIR >YASİR API'lik iş dedi
+
+
+
+
+DÜZENLENECEK KISIMLAR
+___________________________
+**ilandetayına ilanın bulunduğu konumu da eklemelisin
+**emlak vitrini anasayfa vitrini gibi content başlıklarına bir şekil ver ki daha görünür olsunlar
+**HEADER'deki menüye tıklandıktan sonra boş alana tıklanınca menü kapanması gerekiyor ama kapanmıyor > bunu düzenle
+**Telefondan girildiğinde emlak vue'daki konumlar 2 satırda görünüyor > düzelt
+**ilan-bilgiler'ndeki ana resmin sağına ve soluna oklar yerleştirilecek ve bu oklarla beraber ana resim değişecek
+
+
+
+
+
+
+PROFİL SAYFASI

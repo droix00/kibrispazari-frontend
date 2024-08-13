@@ -6,7 +6,6 @@
             <ul class="content__menu-list">
                 <li class="content__menu-item">
                     <router-link to="/hakkimizda" class="content__menu-link">Hakkımızda</router-link>
-
                 </li>
                 <li class="content__menu-item">
                     <router-link to="/iletisim" class="content__menu-link">
@@ -33,7 +32,23 @@ import myFooter from '~/pages/myFooter.vue'; //footeri çağırdık
 export default {
     components: {
         HeaderComponent, myFooter
+    },
+    mounted() {
+        this.setupMenuListeners();
+    }, methods: {
+        setupMenuListeners() {
+            const menuItems = document.querySelectorAll('.content__menu-item'); menuItems.forEach(item => {
+                item.addEventListener('click', function () {
+                    // Aktif olan öğenin sınıfını kaldır
+                    menuItems.forEach(el => el.classList.remove('active'));
+
+                    // Tıklanan öğeye aktif sınıfını ekle
+                    this.classList.add('active');
+                });
+            });
+        }
     }
+
 }
 </script>
 
@@ -60,16 +75,27 @@ export default {
 
 .content__menu-item {
     /* her alt kategori için bottom ayarlandı */
-    border-bottom: 2px solid #fff;
     background-color: #fff;
     margin-bottom: 0.2rem;
-    padding: 1rem;
+}
+
+
+.content__menu-item:hover {
+    background-color: #e0e0e0;
+}
+
+.content__menu-item.active {
+    background-color: #e0e0e0;
 }
 
 .content__menu-link {
     /* kategorilerdeki link ayarları */
     color: #333;
-    text-decoration: none;
+    text-decoration: none;   
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 1rem;
 }
 
 .biz_icerik {
@@ -91,10 +117,10 @@ export default {
     }
 
     .biz_icerik {
-        margin:0.5rem;
-        padding:0.5rem 0.5rem 2rem 0.5rem;
+        margin: 0.5rem;
+        padding: 0.5rem 0.5rem 2rem 0.5rem;
         margin-top: 1rem;
-        margin-bottom:3rem;
+        margin-bottom: 3rem;
         border-radius: 0.3rem;
     }
 }

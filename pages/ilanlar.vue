@@ -11,39 +11,16 @@
                         <span class="m-auto"><i :class="item.icon"></i></span>
                         <a :href="item.to" class="hover:bg-blue-50"> {{ item.title }}</a>
                     </div>
-
-
-
-
-                    <!-- <router-link to="/acil-acil" class="content__menu-link"><i class="fa-solid fa-house-flag"></i>
-                        Emlak</router-link> -->
                 </li>
-                <!-- <li class="content__menu-item">
-                    <router-link to="/acil-acil" class="content__menu-link"><i class="fa-solid fa-house-user ml-4"></i>
-                        Kiralık Daire</router-link>
-                </li>
-                <li class="content__menu-item">
-                    <router-link to="/araba" class="content__menu-link"><i class="fa-solid fa-house-circle-check ml-4"></i> Satılık Daire</router-link>
-                </li>
-                <li class="content__menu-item">
-                    <router-link to="/konut" class="content__menu-link"><i class="fa-solid fa-house-chimney ml-4"></i> Villa</router-link>
-                </li>
-                <li class="content__menu-item">
-                    <router-link to="/telefon" class="content__menu-link"><i class="fa-solid fa-shop ml-4"></i> İş Yeri</router-link>
-                </li>
-                <li class="content__menu-item">
-                    <router-link to="/bilgisayar" class="content__menu-link"><i class="fa-solid fa-map-marked-alt ml-4"></i> Arazi</router-link>
-                </li> -->
                 <br />
                 <h2 class="content__menu-title">Konum</h2>
-
                 <USelectMenu v-model="selected_cities" :options="cities" />
             </ul>
         </div>
         <div class="content__vitrine">
             <h2 class="content__vitrine-title" id="metinAlanı">Emlak Vitrini {{ selected_cities == 'Seçiniz' ? '' : '|'
-                        +
-                        selected_cities }} </h2>
+                +
+                selected_cities }} </h2>
             <div class="basliklar ml-5 my-1 py-1 flex flex-row bg-zinc-200 text-black">
                 <div class="a1 border-r border-gray-300"></div>
                 <div class="title border-r border-gray-300">İlan Başlığı</div>
@@ -67,10 +44,9 @@
                             <div class="oda_sayisi border-r border-gray-300">{{ item.roomCount }}</div>
                             <div class="fiyat border-r border-gray-300 text-red-800">{{ item.price }}</div>
                             <div class="ilan_bilgileri_tarihi border-r border-gray-300">{{ item.listingDate }}</div>
-                            <div class="ilan_bilgileri_konum border-r border-black-300"><i class="lokasyon fa-solid fa-location-dot"></i> {{ item.location }}</div>
+                            <div class="ilan_bilgileri_konum border-r border-black-300"><i
+                                    class="lokasyon fa-solid fa-location-dot"></i> {{ item.location }}</div>
                         </div>
-                        <!-- <div class="ilan_bilgileri_fiyat">{{ item.price }} TL</div> -->
-                        <!-- <p>{{ item.description }}</p> -->
                     </a>
                 </div>
             </div>
@@ -244,6 +220,7 @@ const vitrineItem = [
     justify-content: center;
     align-items: center;
 }
+
 .ilan_bilgileri_konum {
     width: 5.3rem;
     text-align: center;
@@ -252,7 +229,7 @@ const vitrineItem = [
     align-items: center;
 }
 
-.lokasyon{
+.lokasyon {
     display: none;
 }
 
@@ -302,36 +279,48 @@ const vitrineItem = [
     .denemem {
         display: grid;
         grid-template-columns: 3.3rem 1fr 1fr 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr; /* Resim için otomatik genişlik, geri kalan alan 1 fraksiyonlu */
+        grid-template-rows: 1fr 1fr 1fr;
+        /* Resim için otomatik genişlik, geri kalan alan 1 fraksiyonlu */
     }
 
 
-    .resim{
-        grid-row: 1/ span 3; /* İlk iki satırı kaplar */
-        grid-column: 1/span 2; /* Resim birinci sütunda */
+    .resim {
+        grid-row: 1/ span 3;
+        /* İlk iki satırı kaplar */
+        grid-column: 1/span 2;
+        /* Resim birinci sütunda */
     }
+
     .content__vitrine-item img {
         height: auto;
     }
 
     .title {
-        width:auto;
-        border-right:none;
-        margin:0rem 0.2rem 0.2rem 0.2rem;
-        grid-row: 1 / 3; /* bir iki ve üçüncü satırları kaplar*/
-        grid-column: 3/ 8; /* İkinci sütunu kaplar */
-        overflow: hidden; /* Taşan kısmı gizle */
-        text-overflow: ellipsis; /* Taşan kısmı ... olarak göster */
+        width: auto;
+        border-right: none;
+        margin: 0rem 0.2rem 0.2rem 0.2rem;
+        grid-row: 1 / 3;
+        /* bir iki ve üçüncü satırları kaplar*/
+        grid-column: 3/ 8;
+        /* İkinci sütunu kaplar */
+        overflow: hidden;
+        /* Taşan kısmı gizle */
+        text-overflow: ellipsis;
+        /* Taşan kısmı ... olarak göster */
         white-space: wrap;
         line-height: 1.25em;
         justify-content: flex-start;
     }
 
     .fiyat {
-        width:auto;border-right:none;
-        grid-row: 3/span 4;/* üçüncü satırda */
-        grid-column: 5/ 7;/* üçüncü sütunda */
-        justify-content: flex-end;padding-right: 0.4rem;
+        width: auto;
+        border-right: none;
+        grid-row: 3/span 4;
+        /* üçüncü satırda */
+        grid-column: 5/ 7;
+        /* üçüncü sütunda */
+        justify-content: flex-end;
+        padding-right: 0.4rem;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -339,18 +328,21 @@ const vitrineItem = [
 
     }
 
-    .lokasyon{
+    .lokasyon {
         display: inline;
-        margin:0rem 0.2rem 0rem 0.5rem;
+        margin: 0rem 0.2rem 0rem 0.5rem;
     }
+
     .ilan_bilgileri_konum {
-        width:8rem;
+        width: 8rem;
         font-size: 0.75rem;
         opacity: 0.8;
-        border-right:none;
+        border-right: none;
         justify-content: flex-start;
-        grid-row: 3/span  4;/* Üçüncü satırda */
-        grid-column: 3/  5;/* İkinci sütunda */
+        grid-row: 3/span 4;
+        /* Üçüncü satırda */
+        grid-column: 3/ 5;
+        /* İkinci sütunda */
     }
 
 
