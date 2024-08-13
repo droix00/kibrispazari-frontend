@@ -38,7 +38,8 @@
     </div>
     <div class="header__search">
       <div class="search-container">
-        <input type="text" v-model="searchQuery" @input="handleSearch" placeholder="Kelime, ilan no veya mağaza adı ile ara">
+        <input type="text" v-model="searchQuery" @input="handleSearch"
+placeholder="Kelime, ilan no veya mağaza adı ile ara 2">
         <i class="fas fa-search" @click="handleSearch"></i>
         <div class="dropdown" v-show="isDropdownVisible">
           <ul>
